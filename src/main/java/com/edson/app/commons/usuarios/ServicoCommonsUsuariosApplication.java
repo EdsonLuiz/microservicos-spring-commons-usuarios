@@ -1,13 +1,9 @@
 package com.edson.app.commons.usuarios;
 
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
-public class ServicoCommonsUsuariosApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ServicoCommonsUsuariosApplication.class, args);
-	}
-
-}
+@EnableAutoConfiguration(exclude= {DataSourceAutoConfiguration.class})
+public class ServicoCommonsUsuariosApplication {}
